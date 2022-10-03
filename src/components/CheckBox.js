@@ -1,8 +1,9 @@
 import React from 'react';
-import  PropTypes  from "prop-types";
+import PropTypes from "prop-types";
 import Icon from "react-native-vector-icons/FontAwesome";
 import { View, TouchableOpacity, Text, StyleSheet } from 'react-native';
 
+//Usamos um destructuring para pegar a props onChange
 export default function CheckBox(props) {
   function handleChange() {
     const { onChange } = props;
@@ -10,7 +11,9 @@ export default function CheckBox(props) {
       return onChange();
     }
   }
-
+  //o evento será chamado quando o usuário ao clicar no onPress essa props será 
+  //uma função que irá ser passada para o componente, que em tese, irá mudar o estado 
+  //da props value.
   return (
     <View style={styles.WrapperCheckBox}>
 
@@ -32,7 +35,7 @@ export default function CheckBox(props) {
       <Text style={[styles.LabelCheck, props.labelStyle]}>
         {props.label}
       </Text>
-      
+
     </View>
   );
 }
@@ -66,6 +69,6 @@ CheckBox.propTypes = {
 };
 
 //  Nosso componente será basicamente um quadrado vazado e ao lado desse
-//  quadrado uma label. Ao clicar no quadrado (que está vazado no momento), 
-//  terá que aparecer um check e vice-versa. Precisamos então de um botão, algumas views, 
+//  quadrado uma label. Ao clicar no quadrado (que está vazado no momento),
+//  terá que aparecer um check e vice-versa. Precisamos então de um botão, algumas views,
 //  texto, ícones e estilo.
