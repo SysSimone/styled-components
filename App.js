@@ -24,7 +24,7 @@ export default function App() {
 
          <CheckBox
           label="Esse é o checkbox"
-          labelStyle={{ color: 'black', fontSize: 16 }}
+          labelStyle={{ color: 'black', fontSize: 15 }}
           iconColor="black"
           checkColor="black"
           value={check}
